@@ -1,13 +1,9 @@
-VERSIÓ 4 — WEB TRILINGÜE
+VERSIÓ 5 — ESTRUCTURA FINAL
 
-Selector superior:
-CAT · ESP · ENG
+S'ha separat visualment la part final:
+1. COMPETÈNCIES — etiquetes independents.
+2. IDIOMES — blocs propis.
+3. CERTIFICATS — blocs propis.
+4. CONTACTE — secció fosca separada i posterior.
 
-La web canvia el contingut entre català, castellà i anglès sense recarregar.
-L'idioma triat queda guardat al navegador.
-
-Actualitza al repositori GitHub:
-index.html
-perfil.jpg
-CV_Lluis_Mestre.pdf
-.nojekyll
+També manté CAT / ESP / ENG.

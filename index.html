@@ -28,9 +28,15 @@ h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:
 .dark .card{background:#1b1b1b;border-color:#333}.dark .card p{color:#aaa}
 .qual{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}.qual div{padding:25px 0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}.qual div:nth-child(even){padding-left:30px}.qual h3{margin:0 0 5px;font-size:1.05rem}.qual p{margin:0;color:var(--muted);font-size:.9rem}
 .tags{display:flex;flex-wrap:wrap;gap:10px}.tag{border:1px solid currentColor;padding:10px 14px;font-size:.82rem}
+.mini-sections{margin-top:70px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #333;border-bottom:1px solid #333}
+.mini-block{padding:28px 22px;min-height:155px;border-right:1px solid #333}
+.mini-block:last-child{border-right:0}
+.mini-label{font-size:.68rem;letter-spacing:.16em;color:#999;font-weight:700;margin-bottom:22px}
+.mini-block h3{margin:0 0 6px;font-size:1.05rem;line-height:1.2}
+.mini-block p{margin:0;color:#aaa;font-size:.88rem}
 .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:5vw}.contactbig{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.05em;line-height:1}.contactbig a{text-decoration:none}.contactsmall{color:#aaa}.contactsmall strong{color:white}
 .footer{padding:30px 0;background:#0a0a0a;color:#888;font-size:.78rem}
-@media(max-width:800px){.navin{height:auto;padding:17px 0;display:block}.navlinks{margin-top:12px;gap:15px}.navlinks a{font-size:.7rem}.lang{margin-top:10px;margin-left:0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
+@media(max-width:800px){.navin{height:auto;padding:17px 0;display:block}.navlinks{margin-top:12px;gap:15px}.navlinks a{font-size:.7rem}.lang{margin-top:10px;margin-left:0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid,.mini-sections{grid-template-columns:1fr}.mini-block{border-right:0;border-bottom:1px solid #333}.mini-block:last-child{border-bottom:0}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
 </style>
 </head>
 <body>
@@ -93,10 +99,48 @@ h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:
 <div class="card"><div class="num">03</div><h3 data-ca="Futbol i metodologia" data-en="Football & methodology" data-es="Fútbol y metodología" data-en="Football & methodology">Futbol i metodologia</h3><p data-ca="Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius." data-en="Training, youth football, methodology and physical preparation applied to sporting contexts." data-es="Entrenamiento, fútbol formativo, metodología y preparación física aplicados a contextos deportivos." data-en="Training, youth football, methodology and physical preparation applied to sporting contexts.">Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius.</p></div>
 </div></div></section>
 
-<section class="section dark"><div class="wrap">
-<div class="sectionhead"><h2 data-ca="Competències" data-en="Competences" data-es="Competencias" data-en="Competences">Competències</h2><p data-ca="Competències destacades del perfil professional." data-en="Key professional competences." data-es="Competencias destacadas del perfil profesional." data-en="Key professional competences.">Competències destacades del perfil professional.</p></div>
-<div class="tags"><span class="tag" data-ca="Adaptabilitat i innovació docent" data-en="Adaptability & teaching innovation" data-es="Adaptabilidad e innovación docente" data-en="Adaptability & teaching innovation">Adaptabilitat i innovació docent</span><span class="tag" data-ca="Treball en equip" data-en="Teamwork" data-es="Trabajo en equipo" data-en="Teamwork">Treball en equip</span><span class="tag" data-ca="Pensament crític" data-en="Critical thinking" data-es="Pensamiento crítico" data-en="Critical thinking">Pensament crític</span><span class="tag" data-ca="Planificació i organització" data-en="Planning & organization" data-es="Planificación y organización" data-en="Planning & organization">Planificació i organització</span><span class="tag" data-ca="Competència digital i IA aplicada" data-en="Digital competence & applied AI" data-es="Competencia digital e IA aplicada" data-en="Digital competence & applied AI">Competència digital i IA aplicada</span></div>
-<div class="cards" style="margin-top:55px"><div class="card"><div class="num">IDIOMES / IDIOMAS</div><h3 data-ca="Català i castellà" data-en="Catalan and Spanish" data-es="Catalán y castellano" data-en="Catalan and Spanish">Català i castellà</h3><p>Nivell C2</p></div><div class="card"><div class="num">IDIOMES / IDIOMAS</div><h3 data-ca="Anglès" data-es="Inglés">Anglès</h3><p data-ca="Nivell B1" data-en="B1 level" data-es="Nivel B1" data-en="B1 level">Nivell B1</p></div><div class="card"><div class="num">CERTIFICATS / CERTIFICADOS</div><h3>ACTIC · Google Certified Educator</h3><p>ACTIC Nivell 2 · Google Certified Educator Nivell 1
+<section class="section dark" id="competencies">
+<div class="wrap">
+<div class="sectionhead">
+<h2 data-ca="Competències" data-es="Competencias" data-en="Competences">Competències</h2>
+<p data-ca="Competències destacades del perfil professional." data-es="Competencias destacadas del perfil profesional." data-en="Key professional competences.">Competències destacades del perfil professional.</p>
+</div>
+<div class="tags">
+<span class="tag" data-ca="Adaptabilitat i innovació docent" data-es="Adaptabilidad e innovación docente" data-en="Adaptability & teaching innovation">Adaptabilitat i innovació docent</span>
+<span class="tag" data-ca="Treball en equip" data-es="Trabajo en equipo" data-en="Teamwork">Treball en equip</span>
+<span class="tag" data-ca="Pensament crític" data-es="Pensamiento crítico" data-en="Critical thinking">Pensament crític</span>
+<span class="tag" data-ca="Planificació i organització" data-es="Planificación y organización" data-en="Planning & organization">Planificació i organització</span>
+<span class="tag" data-ca="Competència digital i IA aplicada" data-es="Competencia digital e IA aplicada" data-en="Digital competence & applied AI">Competència digital i IA aplicada</span>
+</div>
+
+<div class="mini-sections">
+<div class="mini-block">
+<div class="mini-label" data-ca="IDIOMES" data-es="IDIOMAS" data-en="LANGUAGES">IDIOMES</div>
+<h3 data-ca="Català i castellà" data-es="Catalán y castellano" data-en="Catalan & Spanish">Català i castellà</h3>
+<p>C2</p>
+</div>
+<div class="mini-block">
+<div class="mini-label" data-ca="IDIOMES" data-es="IDIOMAS" data-en="LANGUAGES">IDIOMES</div>
+<h3 data-ca="Anglès" data-es="Inglés" data-en="English">Anglès</h3>
+<p data-ca="B1" data-es="B1" data-en="B1">B1</p>
+</div>
+<div class="mini-block">
+<div class="mini-label" data-ca="CERTIFICATS" data-es="CERTIFICADOS" data-en="CERTIFICATES">CERTIFICATS</div>
+<h3>ACTIC</h3>
+<p data-ca="Nivell 2" data-es="Nivel 2" data-en="Level 2">Nivell 2</p>
+</div>
+<div class="mini-block">
+<div class="mini-label" data-ca="CERTIFICATS" data-es="CERTIFICADOS" data-en="CERTIFICATES">CERTIFICATS</div>
+<h3>Google Certified Educator</h3>
+<p data-ca="Nivell 1" data-es="Nivel 1" data-en="Level 1">Nivell 1</p>
+</div>
+<div class="mini-block">
+<div class="mini-label">COPLEFC</div>
+<h3>55322</h3>
+<p data-ca="Col·legiació" data-es="Colegiación" data-en="Professional registration">Col·legiació</p>
+</div>
+</div>
+</div></section>
 
 <section id="contacte" class="section full dark"><div class="wrap contactgrid">
 <div><div class="eyebrow" data-ca="Contacte" data-en="Contact" data-es="Contacto" data-en="Contact">Contacte</div><div class="contactbig"><a href="mailto:lmestre4@xtec.cat">lmestre4@xtec.cat</a></div></div>
