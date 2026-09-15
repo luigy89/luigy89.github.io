@@ -9,10 +9,11 @@
 :root{--bg:#f4f2ed;--ink:#101010;--muted:#6d6d68;--line:#d6d3cb;--dark:#111;--light:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-a{color:inherit} .wrap{max-width:1240px;margin:auto;padding:0 6vw}
-.nav{position:sticky;top:0;z-index:20;background:rgba(244,242,237,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:.12em;font-size:.9rem}.navlinks a{text-decoration:none;margin-left:28px;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+a{color:inherit}.wrap{max-width:1240px;margin:auto;padding:0 6vw}
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,242,237,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;letter-spacing:.12em;font-size:.9rem}.navlinks{display:flex;align-items:center;flex-wrap:wrap;gap:25px}.navlinks a{text-decoration:none;font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
+.lang{display:flex;gap:6px;margin-left:4px}.lang button{border:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer;font-size:.9rem;border-radius:4px}.lang button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center;padding:8vw 0}
 .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.76rem;margin-bottom:20px}
 h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:0 0 34px}
@@ -22,98 +23,98 @@ h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:
 .section{padding:110px 0}.section.dark{background:var(--dark);color:white}.section.full{max-width:none}.section.full>.wrap{max-width:1240px}
 .sectionhead{display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;border-top:2px solid currentColor;padding-top:14px;margin-bottom:55px}.sectionhead h2{font-size:clamp(2.4rem,5vw,5rem);letter-spacing:-.05em;line-height:.9;margin:0}.sectionhead p{max-width:620px;color:var(--muted);margin:0;font-size:1.05rem}.dark .sectionhead p{color:#aaa}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 80px}.stat{padding:28px 20px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{font-size:2.7rem;letter-spacing:-.05em;display:block}.stat span{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em}
-.timeline{position:relative;margin-left:12px;border-left:1px solid #aaa}.item{position:relative;padding:0 0 55px 38px}.item:before{content:"";position:absolute;left:-5px;top:5px;width:9px;height:9px;background:var(--ink);border-radius:50%}.item .year{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:bold}.item h3{font-size:1.35rem;margin:7px 0}.item p{margin:0;color:var(--muted);max-width:650px}
+.timeline{position:relative;margin-left:12px;border-left:1px solid #aaa}.item{position:relative;padding:0 0 55px 38px}.item:before{content:"";position:absolute;left:-5px;top:5px;width:9px;height:9px;background:currentColor;border-radius:50%}.item .year{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:bold}.item h3{font-size:1.35rem;margin:7px 0}.item p{margin:0;color:var(--muted);max-width:650px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--light);padding:28px;min-height:230px;border:1px solid var(--line)}.card .num{font-size:.75rem;letter-spacing:.15em;color:var(--muted)}.card h3{font-size:1.35rem;margin:35px 0 10px}.card p{color:var(--muted);margin:0}
 .dark .card{background:#1b1b1b;border-color:#333}.dark .card p{color:#aaa}
 .qual{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}.qual div{padding:25px 0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}.qual div:nth-child(even){padding-left:30px}.qual h3{margin:0 0 5px;font-size:1.05rem}.qual p{margin:0;color:var(--muted);font-size:.9rem}
 .tags{display:flex;flex-wrap:wrap;gap:10px}.tag{border:1px solid currentColor;padding:10px 14px;font-size:.82rem}
 .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:5vw}.contactbig{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.05em;line-height:1}.contactbig a{text-decoration:none}.contactsmall{color:#aaa}.contactsmall strong{color:white}
 .footer{padding:30px 0;background:#0a0a0a;color:#888;font-size:.78rem}
-@media(max-width:800px){.navin{height:auto;padding:18px 0;display:block}.navlinks{margin-top:10px}.navlinks a{margin:0 18px 0 0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
+@media(max-width:800px){.navin{height:auto;padding:17px 0;display:block}.navlinks{margin-top:12px;gap:15px}.navlinks a{font-size:.7rem}.lang{margin-top:10px;margin-left:0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
 </style>
 </head>
 <body>
 <nav class="nav"><div class="wrap navin">
 <div class="logo">LM</div>
-<div class="navlinks"><a href="#perfil">Perfil</a><a href="#experiencia">Experiència</a><a href="#formacio">Formació</a><a href="#projectes">Àrees</a><a href="#contacte">Contacte</a></div>
+<div class="navlinks">
+<a href="#perfil" data-ca="Perfil" data-es="Perfil">Perfil</a>
+<a href="#experiencia" data-ca="Experiència" data-es="Experiencia">Experiència</a>
+<a href="#formacio" data-ca="Formació" data-es="Formación">Formació</a>
+<a href="#projectes" data-ca="Àrees" data-es="Áreas">Àrees</a>
+<a href="#contacte" data-ca="Contacte" data-es="Contacto">Contacte</a>
+<div class="lang"><button id="ca" class="active" onclick="setLang('ca')" aria-label="Català">🇨🇺</button><button id="es" onclick="setLang('es')" aria-label="Español">🇪🇸</button></div>
+</div>
 </div></nav>
 
 <header class="wrap hero">
 <div>
-<div class="eyebrow">Docència · Futbol · Rendiment esportiu</div>
+<div class="eyebrow" data-ca="Docència · Futbol · Rendiment esportiu" data-es="Docencia · Fútbol · Rendimiento deportivo">Docència · Futbol · Rendiment esportiu</div>
 <h1>Lluís<br>Mestre</h1>
-<h2>Docent especialitzat en la formació de tècnics esportius, en el futbol i en l'entrenament i rendiment esportiu.</h2>
-<div class="buttons"><a class="btn primary" href="#perfil">Conèixer el perfil</a><a class="btn" href="CV_Lluis_Mestre.pdf" target="_blank">Descarregar CV</a></div>
+<h2 data-ca="Docent especialitzat en la formació de tècnics esportius, en el futbol i en l'entrenament i rendiment esportiu." data-es="Docente especializado en la formación de técnicos deportivos, en el fútbol y en el entrenamiento y rendimiento deportivo.">Docent especialitzat en la formació de tècnics esportius, en el futbol i en l'entrenament i rendiment esportiu.</h2>
+<div class="buttons"><a class="btn primary" href="#perfil" data-ca="Conèixer el perfil" data-es="Conocer el perfil">Conèixer el perfil</a><a class="btn" href="CV_Lluis_Mestre.pdf" target="_blank" data-ca="Descarregar CV" data-es="Descargar CV">Descarregar CV</a></div>
 </div>
-<div class="portrait"><img src="perfil.jpg" alt="Lluís Mestre"><div class="caption">Professor · Tècnic esportiu · Barcelona</div></div>
+<div class="portrait"><img src="perfil.jpg" alt="Lluís Mestre"><div class="caption" data-ca="Professor · Tècnic esportiu · Barcelona" data-es="Profesor · Técnico deportivo · Barcelona">Professor · Tècnic esportiu · Barcelona</div></div>
 </header>
 
-<section id="perfil" class="section">
-<div class="wrap">
-<div class="sectionhead"><h2>Perfil</h2><p>Experiència en el disseny i desenvolupament de processos d'ensenyament-aprenentatge, integrant els aspectes tècnics, tàctics i físics en contextos pràctics.</p></div>
-<div class="stats"><div class="stat"><b>2017</b><span>Inici de la trajectòria docent</span></div><div class="stat"><b>6</b><span>Titulacions principals</span></div><div class="stat"><b>C2</b><span>Català i castellà</span></div></div>
+<section id="perfil" class="section"><div class="wrap">
+<div class="sectionhead"><h2 data-ca="Perfil" data-es="Perfil">Perfil</h2><p data-ca="Experiència en el disseny i desenvolupament de processos d'ensenyament-aprenentatge, integrant els aspectes tècnics, tàctics i físics en contextos pràctics." data-es="Experiencia en el diseño y desarrollo de procesos de enseñanza-aprendizaje, integrando los aspectos técnicos, tácticos y físicos en contextos prácticos.">Experiència en el disseny i desenvolupament de processos d'ensenyament-aprenentatge, integrant els aspectes tècnics, tàctics i físics en contextos pràctics.</p></div>
+<div class="stats"><div class="stat"><b>2017</b><span data-ca="Inici de la trajectòria docent" data-es="Inicio de la trayectoria docente">Inici de la trajectòria docent</span></div><div class="stat"><b>6</b><span data-ca="Titulacions principals" data-es="Titulaciones principales">Titulacions principals</span></div><div class="stat"><b>C2</b><span data-ca="Català i castellà" data-es="Catalán y castellano">Català i castellà</span></div></div>
 <div class="cards">
-<div class="card"><div class="num">01 / DOCÈNCIA</div><h3>Formació de tècnics</h3><p>Docència en cicles formatius i formació de tècnics esportius, amb experiència en futbol, esquí alpí i muntanya.</p></div>
-<div class="card"><div class="num">02 / FUTBOL</div><h3>Futbol formatiu</h3><p>Experiència com a entrenador i coordinador, amb responsabilitats de metodologia i preparació física.</p></div>
-<div class="card"><div class="num">03 / RENDIMENT</div><h3>Esport i rendiment</h3><p>Formació específica en alt rendiment d'esports col·lectius i experiència vinculada a l'entrenament.</p></div>
-</div>
-</div>
-</section>
+<div class="card"><div class="num">01 / <span data-ca="DOCÈNCIA" data-es="DOCENCIA">DOCÈNCIA</span></div><h3 data-ca="Formació de tècnics" data-es="Formación de técnicos">Formació de tècnics</h3><p data-ca="Docència en cicles formatius i formació de tècnics esportius, amb experiència en futbol, esquí alpí i muntanya." data-es="Docencia en ciclos formativos y formación de técnicos deportivos, con experiencia en fútbol, esquí alpino y montaña.">Docència en cicles formatius i formació de tècnics esportius, amb experiència en futbol, esquí alpí i muntanya.</p></div>
+<div class="card"><div class="num">02 / <span data-ca="FUTBOL" data-es="FÚTBOL">FUTBOL</span></div><h3 data-ca="Futbol formatiu" data-es="Fútbol formativo">Futbol formatiu</h3><p data-ca="Experiència com a entrenador i coordinador, amb responsabilitats de metodologia i preparació física." data-es="Experiencia como entrenador y coordinador, con responsabilidades de metodología y preparación física.">Experiència com a entrenador i coordinador, amb responsabilitats de metodologia i preparació física.</p></div>
+<div class="card"><div class="num">03 / <span data-ca="RENDIMENT" data-es="RENDIMIENTO">RENDIMENT</span></div><h3 data-ca="Esport i rendiment" data-es="Deporte y rendimiento">Esport i rendiment</h3><p data-ca="Formació específica en alt rendiment d'esports col·lectius i experiència vinculada a l'entrenament." data-es="Formación específica en alto rendimiento de deportes colectivos y experiencia vinculada al entrenamiento.">Formació específica en alt rendiment d'esports col·lectius i experiència vinculada a l'entrenament.</p></div>
+</div></div></section>
 
-<section id="experiencia" class="section dark">
-<div class="wrap">
-<div class="sectionhead"><h2>Experiència</h2><p>Una trajectòria que combina docència, formació esportiva, futbol formatiu i coordinació de la formació en centres de treball.</p></div>
+<section id="experiencia" class="section dark"><div class="wrap">
+<div class="sectionhead"><h2 data-ca="Experiència" data-es="Experiencia">Experiència</h2><p data-ca="Una trajectòria que combina docència, formació esportiva, futbol formatiu i coordinació de la formació en centres de treball." data-es="Una trayectoria que combina docencia, formación deportiva, fútbol formativo y coordinación de la formación en centros de trabajo.">Una trajectòria que combina docència, formació esportiva, futbol formatiu i coordinació de la formació en centres de treball.</p></div>
 <div class="timeline">
-<div class="item"><div class="year">2018 — actualitat</div><h3>Docent de cicles formatius · Departament d'Educació</h3><p>Tècnic esportiu en futbol, esquí alpí i muntanya. Tutoria i coordinació de la formació en centres de treball.</p></div>
-<div class="item"><div class="year">2019 — 2020</div><h3>Entrenador de futbol formatiu · Barça Academy</h3><p>Barça Escola Barcelona i participació en un campus d'estiu internacional a Itàlia.</p></div>
-<div class="item"><div class="year">2017 — 2018</div><h3>Docent de cicles formatius · Col·legi Abat Oliba Spínola</h3><p>Tècnic esportiu en futbol. Tutoria i coordinació de la formació en centres de treball.</p></div>
-<div class="item"><div class="year">2014/15 — 2016/17</div><h3>Entrenador i coordinador de futbol formatiu · CF Guinardó</h3><p>Entrenador del primer equip masculí i responsable de metodologia i preparació física del futbol base.</p></div>
-</div>
-</div>
-</section>
+<div class="item"><div class="year">2018 — actualitat / actualidad</div><h3 data-ca="Docent de cicles formatius · Departament d'Educació" data-es="Docente de ciclos formativos · Departament d'Educació">Docent de cicles formatius · Departament d'Educació</h3><p data-ca="Tècnic esportiu en futbol, esquí alpí i muntanya. Tutoria i coordinació de la formació en centres de treball." data-es="Técnico deportivo en fútbol, esquí alpino y montaña. Tutoría y coordinación de la formación en centros de trabajo.">Tècnic esportiu en futbol, esquí alpí i muntanya. Tutoria i coordinació de la formació en centres de treball.</p></div>
+<div class="item"><div class="year">2019 — 2020</div><h3 data-ca="Entrenador de futbol formatiu · Barça Academy" data-es="Entrenador de fútbol formativo · Barça Academy">Entrenador de futbol formatiu · Barça Academy</h3><p data-ca="Barça Escola Barcelona i participació en un campus d'estiu internacional a Itàlia." data-es="Barça Escola Barcelona y participación en un campus de verano internacional en Italia.">Barça Escola Barcelona i participació en un campus d'estiu internacional a Itàlia.</p></div>
+<div class="item"><div class="year">2017 — 2018</div><h3 data-ca="Docent de cicles formatius · Col·legi Abat Oliba Spínola" data-es="Docente de ciclos formativos · Col·legi Abat Oliba Spínola">Docent de cicles formatius · Col·legi Abat Oliba Spínola</h3><p data-ca="Tècnic esportiu en futbol. Tutoria i coordinació de la formació en centres de treball." data-es="Técnico deportivo en fútbol. Tutoría y coordinación de la formación en centros de trabajo.">Tècnic esportiu en futbol. Tutoria i coordinació de la formació en centres de treball.</p></div>
+<div class="item"><div class="year">2014/15 — 2016/17</div><h3 data-ca="Entrenador i coordinador de futbol formatiu · CF Guinardó" data-es="Entrenador y coordinador de fútbol formativo · CF Guinardó">Entrenador i coordinador de futbol formatiu · CF Guinardó</h3><p data-ca="Entrenador del primer equip masculí i responsable de metodologia i preparació física del futbol base." data-es="Entrenador del primer equipo masculino y responsable de metodología y preparación física del fútbol base.">Entrenador del primer equip masculí i responsable de metodologia i preparació física del futbol base.</p></div>
+</div></div></section>
 
-<section id="formacio" class="section">
-<div class="wrap">
-<div class="sectionhead"><h2>Formació</h2><p>Formació universitària i tècnica orientada a l'educació, l'esport, el futbol, el rendiment i la gestió esportiva.</p></div>
+<section id="formacio" class="section"><div class="wrap">
+<div class="sectionhead"><h2 data-ca="Formació" data-es="Formación">Formació</h2><p data-ca="Formació universitària i tècnica orientada a l'educació, l'esport, el futbol, el rendiment i la gestió esportiva." data-es="Formación universitaria y técnica orientada a la educación, el deporte, el fútbol, el rendimiento y la gestión deportiva.">Formació universitària i tècnica orientada a l'educació, l'esport, el futbol, el rendiment i la gestió esportiva.</p></div>
 <div class="qual">
-<div><h3>Grau en Ciències de l'Activitat Física i l'Esport</h3><p>Universidad de Granada · 2014</p></div>
-<div><h3>Màster universitari en Formació del Professorat</h3><p>Universitat Ramon Llull — Blanquerna · 2015</p></div>
-<div><h3>Màster Alt Rendiment en esports col·lectius</h3><p>INEFC Barcelona — Byomedic System · 2016</p></div>
-<div><h3>Tècnic esportiu superior en futbol</h3><p>Centro Nacional de Formación de Entrenadores · 2017</p></div>
-<div><h3>Grau en Educació Primària — Especialitat Educació Física</h3><p>Universidad Europea de Madrid · 2018</p></div>
-<div><h3>Màster universitari en gestió esportiva</h3><p>Universidad Internacional de Valencia · 2019</p></div>
-</div>
-</div>
-</section>
+<div><h3 data-ca="Grau en Ciències de l'Activitat Física i l'Esport" data-es="Grado en Ciencias de la Actividad Física y del Deporte">Grau en Ciències de l'Activitat Física i l'Esport</h3><p>Universidad de Granada · 2014</p></div>
+<div><h3 data-ca="Màster universitari en Formació del Professorat" data-es="Máster universitario en Formación del Profesorado">Màster universitari en Formació del Professorat</h3><p>Universitat Ramon Llull — Blanquerna · 2015</p></div>
+<div><h3 data-ca="Màster Alt Rendiment en esports col·lectius" data-es="Máster Alto Rendimiento en deportes colectivos">Màster Alt Rendiment en esports col·lectius</h3><p>INEFC Barcelona — Byomedic System · 2016</p></div>
+<div><h3 data-ca="Tècnic esportiu superior en futbol" data-es="Técnico deportivo superior en fútbol">Tècnic esportiu superior en futbol</h3><p>Centro Nacional de Formación de Entrenadores · 2017</p></div>
+<div><h3 data-ca="Grau en Educació Primària — Especialitat Educació Física" data-es="Grado en Educación Primaria — Especialidad Educación Física">Grau en Educació Primària — Especialitat Educació Física</h3><p>Universidad Europea de Madrid · 2018</p></div>
+<div><h3 data-ca="Màster universitari en gestió esportiva" data-es="Máster universitario en gestión deportiva">Màster universitari en gestió esportiva</h3><p>Universidad Internacional de Valencia · 2019</p></div>
+</div></div></section>
 
-<section id="projectes" class="section">
-<div class="wrap">
-<div class="sectionhead"><h2>Àrees de treball</h2><p>Els àmbits que defineixen el perfil professional i sobre els quals es pot ampliar informació, projectes i recursos en futures actualitzacions de la web.</p></div>
+<section id="projectes" class="section"><div class="wrap">
+<div class="sectionhead"><h2 data-ca="Àrees de treball" data-es="Áreas de trabajo">Àrees de treball</h2><p data-ca="Els àmbits que defineixen el perfil professional i sobre els quals es pot ampliar informació, projectes i recursos." data-es="Los ámbitos que definen el perfil profesional y sobre los que se puede ampliar información, proyectos y recursos.">Els àmbits que defineixen el perfil professional i sobre els quals es pot ampliar informació, projectes i recursos.</p></div>
 <div class="cards">
-<div class="card"><div class="num">01</div><h3>Innovació docent</h3><p>Disseny de processos d'ensenyament-aprenentatge, adaptabilitat, innovació i competència digital.</p></div>
-<div class="card"><div class="num">02</div><h3>Formació esportiva</h3><p>Formació de tècnics esportius i connexió entre coneixement teòric i aplicació pràctica.</p></div>
-<div class="card"><div class="num">03</div><h3>Futbol i metodologia</h3><p>Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius.</p></div>
-</div>
-</div>
-</section>
+<div class="card"><div class="num">01</div><h3 data-ca="Innovació docent" data-es="Innovación docente">Innovació docent</h3><p data-ca="Disseny de processos d'ensenyament-aprenentatge, adaptabilitat, innovació i competència digital." data-es="Diseño de procesos de enseñanza-aprendizaje, adaptabilidad, innovación y competencia digital.">Disseny de processos d'ensenyament-aprenentatge, adaptabilitat, innovació i competència digital.</p></div>
+<div class="card"><div class="num">02</div><h3 data-ca="Formació esportiva" data-es="Formación deportiva">Formació esportiva</h3><p data-ca="Formació de tècnics esportius i connexió entre coneixement teòric i aplicació pràctica." data-es="Formación de técnicos deportivos y conexión entre conocimiento teórico y aplicación práctica.">Formació de tècnics esportius i connexió entre coneixement teòric i aplicació pràctica.</p></div>
+<div class="card"><div class="num">03</div><h3 data-ca="Futbol i metodologia" data-es="Fútbol y metodología">Futbol i metodologia</h3><p data-ca="Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius." data-es="Entrenamiento, fútbol formativo, metodología y preparación física aplicados a contextos deportivos.">Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius.</p></div>
+</div></div></section>
 
-<section class="section dark">
-<div class="wrap">
-<div class="sectionhead"><h2>Competències</h2><p>Competències destacades del perfil professional.</p></div>
-<div class="tags"><span class="tag">Adaptabilitat i innovació docent</span><span class="tag">Treball en equip</span><span class="tag">Pensament crític</span><span class="tag">Planificació i organització</span><span class="tag">Competència digital i IA aplicada</span></div>
-<div class="cards" style="margin-top:55px">
-<div class="card"><div class="num">IDIOMES</div><h3>Català i castellà</h3><p>Nivell C2</p></div>
-<div class="card"><div class="num">IDIOMES</div><h3>Anglès</h3><p>Nivell B1</p></div>
-<div class="card"><div class="num">CERTIFICATS</div><h3>ACTIC · Google Certified Educator</h3><p>ACTIC Nivell 2 · Google Certified Educator Nivell 1 · COPLEFC 55322</p></div>
-</div>
-</div>
-</section>
+<section class="section dark"><div class="wrap">
+<div class="sectionhead"><h2 data-ca="Competències" data-es="Competencias">Competències</h2><p data-ca="Competències destacades del perfil professional." data-es="Competencias destacadas del perfil profesional.">Competències destacades del perfil professional.</p></div>
+<div class="tags"><span class="tag" data-ca="Adaptabilitat i innovació docent" data-es="Adaptabilidad e innovación docente">Adaptabilitat i innovació docent</span><span class="tag" data-ca="Treball en equip" data-es="Trabajo en equipo">Treball en equip</span><span class="tag" data-ca="Pensament crític" data-es="Pensamiento crítico">Pensament crític</span><span class="tag" data-ca="Planificació i organització" data-es="Planificación y organización">Planificació i organització</span><span class="tag" data-ca="Competència digital i IA aplicada" data-es="Competencia digital e IA aplicada">Competència digital i IA aplicada</span></div>
+<div class="cards" style="margin-top:55px"><div class="card"><div class="num">IDIOMES / IDIOMAS</div><h3 data-ca="Català i castellà" data-es="Catalán y castellano">Català i castellà</h3><p>Nivell C2</p></div><div class="card"><div class="num">IDIOMES / IDIOMAS</div><h3 data-ca="Anglès" data-es="Inglés">Anglès</h3><p data-ca="Nivell B1" data-es="Nivel B1">Nivell B1</p></div><div class="card"><div class="num">CERTIFICATS / CERTIFICADOS</div><h3>ACTIC · Google Certified Educator</h3><p>ACTIC Nivell 2 · Google Certified Educator Nivell 1 · COPLEFC 55322</p></div></div>
+</div></section>
 
-<section id="contacte" class="section full dark">
-<div class="wrap contactgrid">
-<div><div class="eyebrow">Contacte</div><div class="contactbig"><a href="mailto:lmestre4@xtec.cat">lmestre4@xtec.cat</a></div></div>
-<div class="contactsmall"><p><strong>Lluís Mestre</strong><br>Docència · Futbol · Rendiment esportiu</p><p>+34 696 68 31 31</p><p><a href="CV_Lluis_Mestre.pdf">Descarregar CV en PDF →</a></p></div>
-</div>
-</section>
+<section id="contacte" class="section full dark"><div class="wrap contactgrid">
+<div><div class="eyebrow" data-ca="Contacte" data-es="Contacto">Contacte</div><div class="contactbig"><a href="mailto:lmestre4@xtec.cat">lmestre4@xtec.cat</a></div></div>
+<div class="contactsmall"><p><strong>Lluís Mestre</strong><br><span data-ca="Docència · Futbol · Rendiment esportiu" data-es="Docencia · Fútbol · Rendimiento deportivo">Docència · Futbol · Rendiment esportiu</span></p><p>+34 696 68 31 31</p><p><a href="CV_Lluis_Mestre.pdf" data-ca="Descarregar CV en PDF →" data-es="Descargar CV en PDF →">Descarregar CV en PDF →</a></p></div>
+</div></section>
 <footer class="footer"><div class="wrap">© Lluís Mestre · Portfolio professional</div></footer>
-</body></html>
+
+<script>
+function setLang(lang){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-ca]').forEach(el=>{el.textContent=el.getAttribute('data-'+lang)});
+  document.getElementById('ca').classList.toggle('active',lang==='ca');
+  document.getElementById('es').classList.toggle('active',lang==='es');
+  localStorage.setItem('siteLang',lang);
+}
+const saved=localStorage.getItem('siteLang') || (navigator.language && navigator.language.toLowerCase().startsWith('es')?'es':'ca');
+setLang(saved);
+</script>
+</body>
+</html>

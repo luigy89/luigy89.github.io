@@ -1,24 +1,15 @@
-WEB PROFESSIONAL — LLUÍS MESTRE
+VERSIÓ 3 — WEB BILINGÜE CATALÀ / ESPAÑOL
 
-PUBLICACIÓ GRATUÏTA AMB GITHUB PAGES
+La web incorpora un selector d'idioma amb banderes:
+🇨🇺 Català
+🇪🇸 Español
 
-1. Crea un compte a GitHub si no en tens.
-2. Crea un repositori públic anomenat:
-   ELTEUNOMD'USUARI.github.io
-   (substitueix ELTEUNOMD'USUARI pel teu nom d'usuari real de GitHub).
-3. Puja TOTS els fitxers d'aquesta carpeta a l'arrel del repositori:
-   - index.html
-   - perfil.jpg (si hi és)
-   - CV_Lluis_Mestre.pdf
-   - .nojekyll
-4. Ves a Settings > Pages.
-5. A Build and deployment, selecciona:
-   Source: Deploy from a branch
-   Branch: main
-   Folder: / (root)
-6. Guarda.
-7. La web quedarà disponible a:
-   https://ELTEUNOMD'USUARI.github.io
+L'idioma escollit es desa al navegador i es manté en futures visites.
 
-NOTA:
-La URL de GitHub Pages és gratuïta. No cal comprar un domini.
+Per actualitzar GitHub Pages, substitueix a la teva arrel:
+- index.html
+- perfil.jpg
+- CV_Lluis_Mestre.pdf
+- .nojekyll
+
+No cal modificar cap configuració de GitHub Pages.
