@@ -12,7 +12,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,
 a{color:inherit}.wrap{max-width:1240px;margin:auto;padding:0 6vw}
 .nav{position:sticky;top:0;z-index:20;background:rgba(244,242,237,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-weight:800;letter-spacing:.12em;font-size:.9rem}.navlinks{display:flex;align-items:center;flex-wrap:wrap;gap:25px}.navlinks a{text-decoration:none;font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
+.logo{font-weight:800;letter-spacing:.12em;font-size:.9rem;display:flex;align-items:center;gap:14px}.member-badge{font-size:.62rem;letter-spacing:.08em;border:1px solid var(--ink);padding:6px 9px;font-weight:700}.navlinks{display:flex;align-items:center;flex-wrap:wrap;gap:25px}.navlinks a{text-decoration:none;font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
 .lang{display:flex;gap:6px;margin-left:4px}.lang button{border:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer;font-size:.9rem;border-radius:4px}.lang button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center;padding:8vw 0}
 .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.76rem;margin-bottom:20px}
@@ -36,12 +36,12 @@ h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:
 .mini-block p{margin:0;color:#aaa;font-size:.88rem}
 .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:5vw}.contactbig{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.05em;line-height:1}.contactbig a{text-decoration:none}.contactsmall{color:#aaa}.contactsmall strong{color:white}
 .footer{padding:30px 0;background:#0a0a0a;color:#888;font-size:.78rem}
-@media(max-width:800px){.navin{height:auto;padding:17px 0;display:block}.navlinks{margin-top:12px;gap:15px}.navlinks a{font-size:.7rem}.lang{margin-top:10px;margin-left:0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid,.mini-sections{grid-template-columns:1fr}.mini-block{border-right:0;border-bottom:1px solid #333}.mini-block:last-child{border-bottom:0}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
+@media(max-width:800px){.logo{flex-wrap:wrap}.member-badge{font-size:.56rem}.navin{height:auto;padding:17px 0;display:block}.navlinks{margin-top:12px;gap:15px}.navlinks a{font-size:.7rem}.lang{margin-top:10px;margin-left:0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid,.mini-sections{grid-template-columns:1fr}.mini-block{border-right:0;border-bottom:1px solid #333}.mini-block:last-child{border-bottom:0}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
 </style>
 </head>
 <body>
 <nav class="nav"><div class="wrap navin">
-<div class="logo">LM</div>
+<div class="logo">LM <span class="member-badge">COPLEFC 55322</span></div>
 <div class="navlinks">
 <a href="#perfil" data-ca="Perfil" data-en="Profile" data-es="Perfil" data-en="Profile">Perfil</a>
 <a href="#experiencia" data-ca="Experiència" data-en="Experience" data-es="Experiencia" data-en="Experience">Experiència</a>
@@ -137,7 +137,7 @@ h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:
 <div class="mini-block">
 <div class="mini-label">COPLEFC</div>
 <h3>55322</h3>
-<p data-ca="Col·legiació" data-es="Colegiación" data-en="Professional registration">Col·legiació</p>
+<p data-ca="Número de col·legiat" data-es="Número de colegiado" data-en="Professional registration number">Número de col·legiat</p>
 </div>
 </div>
 </div></section>

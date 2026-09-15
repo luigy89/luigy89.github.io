@@ -1,9 +1,7 @@
-VERSIÓ 5 — ESTRUCTURA FINAL
+VERSIÓ 6 — COPLEFC DESTACAT
 
-S'ha separat visualment la part final:
-1. COMPETÈNCIES — etiquetes independents.
-2. IDIOMES — blocs propis.
-3. CERTIFICATS — blocs propis.
-4. CONTACTE — secció fosca separada i posterior.
-
-També manté CAT / ESP / ENG.
+COPLEFC 55322 apareix a la capçalera com a credencial professional.
+També es manté dins de CERTIFICATS com a número de col·legiat.
+S'ha eliminat qualsevol referència a COPLEFC de CONTACTE.
+Es mantenen CAT · ESP · ENG.
+No cal pujar .nojekyll.
