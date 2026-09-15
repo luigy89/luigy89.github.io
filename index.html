@@ -1,103 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lluís Mestre | Docent i especialista en futbol</title>
-<meta name="description" content="Perfil professional de Lluís Mestre: docència, formació de tècnics esportius, futbol i rendiment esportiu.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lluís Mestre — Docència · Futbol · Rendiment</title>
+<meta name="description" content="Portfolio professional de Lluís Mestre, docent especialitzat en formació de tècnics esportius, futbol i rendiment esportiu.">
 <style>
-:root{--ink:#111;--muted:#666;--paper:#f7f7f4;--line:#ddd;--accent:#183b56}
+:root{--bg:#f4f2ed;--ink:#101010;--muted:#6d6d68;--line:#d6d3cb;--dark:#111;--light:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
-nav{position:sticky;top:0;z-index:10;background:rgba(247,247,244,.95);border-bottom:1px solid var(--line);padding:14px 6vw;display:flex;justify-content:space-between;align-items:center}
-nav strong{letter-spacing:.08em}nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:.9rem}
-.hero{min-height:78vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;padding:7vw 10vw;gap:5vw;background:white}
-.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:var(--accent);font-weight:bold}
-h1{font-size:clamp(3.5rem,8vw,7.5rem);line-height:.9;margin:18px 0 28px;letter-spacing:-.06em}
-.hero h2{font-size:clamp(1.3rem,2vw,2rem);font-weight:400;max-width:720px}
-.cta{display:inline-block;background:var(--ink);color:white;padding:13px 22px;text-decoration:none;margin:18px 10px 0 0;font-weight:bold}
-.cta.alt{background:white;color:var(--ink);border:1px solid var(--ink)}
-.photo{background:#111;min-height:520px;display:flex;align-items:flex-end;padding:30px;color:white;position:relative;overflow:hidden}
-.photo:before{content:"";font-size:15rem;font-weight:900;line-height:.8;position:absolute;right:-20px;top:50px;color:#222}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.88}.photo span{position:relative;font-size:1.1rem;max-width:250px}
-section{padding:90px 10vw;max-width:1400px;margin:auto}
-section:nth-child(even){background:white;max-width:none;padding-left:10vw;padding-right:10vw}
-.section-title{display:flex;justify-content:space-between;gap:30px;border-top:2px solid var(--ink);padding-top:15px;margin-bottom:45px}
-.section-title h2{font-size:2.3rem;margin:0}.section-title p{max-width:500px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:35px}
-.card{border-top:1px solid var(--line);padding-top:20px}.card h3{margin:0 0 5px;font-size:1.15rem}.meta{color:var(--muted);font-size:.9rem}.card ul{padding-left:20px}
-.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{border:1px solid var(--ink);padding:9px 14px}
-.contact{background:var(--ink)!important;color:white!important}.contact .section-title{border-color:white}.contact a{color:white}
-footer{padding:30px 10vw;background:#111;color:#aaa;font-size:.85rem}
-@media(max-width:800px){nav{display:block}nav div{margin-top:8px}nav a{margin:0 16px 0 0}.hero{grid-template-columns:1fr;padding:70px 7vw}.photo{min-height:280px}section,section:nth-child(even){padding:65px 7vw}.grid{grid-template-columns:1fr}.section-title{display:block}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit} .wrap{max-width:1240px;margin:auto;padding:0 6vw}
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,242,237,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.12em;font-size:.9rem}.navlinks a{text-decoration:none;margin-left:28px;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:center;padding:8vw 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.76rem;margin-bottom:20px}
+h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.075em;margin:0 0 34px}
+.hero h2{font-size:clamp(1.2rem,2vw,1.65rem);font-weight:400;max-width:650px;margin:0 0 28px}
+.buttons{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:14px 20px;border:1px solid var(--ink);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}.btn.primary{background:var(--ink);color:white}
+.portrait{height:min(680px,72vh);background:#171717;position:relative;overflow:hidden}.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82)}.portrait .caption{position:absolute;left:22px;bottom:20px;color:white;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.section{padding:110px 0}.section.dark{background:var(--dark);color:white}.section.full{max-width:none}.section.full>.wrap{max-width:1240px}
+.sectionhead{display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;border-top:2px solid currentColor;padding-top:14px;margin-bottom:55px}.sectionhead h2{font-size:clamp(2.4rem,5vw,5rem);letter-spacing:-.05em;line-height:.9;margin:0}.sectionhead p{max-width:620px;color:var(--muted);margin:0;font-size:1.05rem}.dark .sectionhead p{color:#aaa}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 80px}.stat{padding:28px 20px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat b{font-size:2.7rem;letter-spacing:-.05em;display:block}.stat span{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em}
+.timeline{position:relative;margin-left:12px;border-left:1px solid #aaa}.item{position:relative;padding:0 0 55px 38px}.item:before{content:"";position:absolute;left:-5px;top:5px;width:9px;height:9px;background:var(--ink);border-radius:50%}.item .year{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:bold}.item h3{font-size:1.35rem;margin:7px 0}.item p{margin:0;color:var(--muted);max-width:650px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--light);padding:28px;min-height:230px;border:1px solid var(--line)}.card .num{font-size:.75rem;letter-spacing:.15em;color:var(--muted)}.card h3{font-size:1.35rem;margin:35px 0 10px}.card p{color:var(--muted);margin:0}
+.dark .card{background:#1b1b1b;border-color:#333}.dark .card p{color:#aaa}
+.qual{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}.qual div{padding:25px 0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}.qual div:nth-child(even){padding-left:30px}.qual h3{margin:0 0 5px;font-size:1.05rem}.qual p{margin:0;color:var(--muted);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:10px}.tag{border:1px solid currentColor;padding:10px 14px;font-size:.82rem}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:5vw}.contactbig{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.05em;line-height:1}.contactbig a{text-decoration:none}.contactsmall{color:#aaa}.contactsmall strong{color:white}
+.footer{padding:30px 0;background:#0a0a0a;color:#888;font-size:.78rem}
+@media(max-width:800px){.navin{height:auto;padding:18px 0;display:block}.navlinks{margin-top:10px}.navlinks a{margin:0 18px 0 0}.hero{grid-template-columns:1fr;padding:70px 0}.portrait{height:420px}.section{padding:75px 0}.sectionhead{grid-template-columns:1fr;gap:20px}.stats,.cards,.qual,.contactgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.qual div:nth-child(odd){padding-right:0;border-right:0}.qual div:nth-child(even){padding-left:0}}
 </style>
 </head>
 <body>
-<nav>
-<strong>LLUÍS MESTRE</strong>
-<div>
-<a href="#perfil">Perfil</a><a href="#experiencia">Experiència</a><a href="#formacio">Formació</a><a href="#competencies">Competències</a><a href="#contacte">Contacte</a>
-</div>
-</nav>
+<nav class="nav"><div class="wrap navin">
+<div class="logo">LM</div>
+<div class="navlinks"><a href="#perfil">Perfil</a><a href="#experiencia">Experiència</a><a href="#formacio">Formació</a><a href="#projectes">Àrees</a><a href="#contacte">Contacte</a></div>
+</div></nav>
 
-<header class="hero">
+<header class="wrap hero">
 <div>
-<div class="kicker">Docència · Esport · Futbol</div>
+<div class="eyebrow">Docència · Futbol · Rendiment esportiu</div>
 <h1>Lluís<br>Mestre</h1>
-<h2>Docent especialitzat en la formació de tècnics esportius, futbol i entrenament i rendiment esportiu.</h2>
-<a class="cta" href="#experiencia">Veure experiència</a>
-<a class="cta alt" href="#contacte">Contacte</a>
+<h2>Docent especialitzat en la formació de tècnics esportius, en el futbol i en l'entrenament i rendiment esportiu.</h2>
+<div class="buttons"><a class="btn primary" href="#perfil">Conèixer el perfil</a><a class="btn" href="CV_Lluis_Mestre.pdf" target="_blank">Descarregar CV</a></div>
 </div>
-<div class="photo has-photo"><img src="perfil.jpg" alt="Lluís Mestre"><span>Professor · Tècnic esportiu · Formació de futbol · Rendiment esportiu</span></div>
+<div class="portrait"><img src="perfil.jpg" alt="Lluís Mestre"><div class="caption">Professor · Tècnic esportiu · Barcelona</div></div>
 </header>
 
-<section id="perfil">
-<div class="section-title"><h2>Perfil professional</h2><p>Experiència en el disseny i desenvolupament de processos d'ensenyament-aprenentatge, integrant els aspectes tècnics, tàctics i físics en contextos pràctics.</p></div>
-<div class="grid">
-<div><h3>Especialització</h3><p>Formació de tècnics esportius tant en el bloc comú com en el bloc específic de futbol, així com entrenament i rendiment esportiu.</p></div>
-<div><h3>Trajectòria</h3><p>Experiència docent des de 2017 i vinculació professional amb el futbol formatiu i la preparació física.</p></div>
+<section id="perfil" class="section">
+<div class="wrap">
+<div class="sectionhead"><h2>Perfil</h2><p>Experiència en el disseny i desenvolupament de processos d'ensenyament-aprenentatge, integrant els aspectes tècnics, tàctics i físics en contextos pràctics.</p></div>
+<div class="stats"><div class="stat"><b>2017</b><span>Inici de la trajectòria docent</span></div><div class="stat"><b>6</b><span>Titulacions principals</span></div><div class="stat"><b>C2</b><span>Català i castellà</span></div></div>
+<div class="cards">
+<div class="card"><div class="num">01 / DOCÈNCIA</div><h3>Formació de tècnics</h3><p>Docència en cicles formatius i formació de tècnics esportius, amb experiència en futbol, esquí alpí i muntanya.</p></div>
+<div class="card"><div class="num">02 / FUTBOL</div><h3>Futbol formatiu</h3><p>Experiència com a entrenador i coordinador, amb responsabilitats de metodologia i preparació física.</p></div>
+<div class="card"><div class="num">03 / RENDIMENT</div><h3>Esport i rendiment</h3><p>Formació específica en alt rendiment d'esports col·lectius i experiència vinculada a l'entrenament.</p></div>
+</div>
 </div>
 </section>
 
-<section id="experiencia">
-<div class="section-title"><h2>Experiència</h2><p>Trajectòria docent i esportiva.</p></div>
-<div class="grid">
-<div class="card"><h3>Docent de cicles formatius</h3><div class="meta">Departament d'Educació · 2018 — actualitat</div><ul><li>Tècnic esportiu en futbol, esquí alpí i muntanya.</li><li>Tutoria i coordinació de la formació en centres de treball.</li></ul></div>
-<div class="card"><h3>Entrenador de futbol formatiu</h3><div class="meta">Barça Academy · juny 2019 — octubre 2020</div><ul><li>Barça Escola Barcelona.</li><li>Campus d'estiu internacional a Itàlia.</li></ul></div>
-<div class="card"><h3>Docent de cicles formatius</h3><div class="meta">Col·legi Abat Oliba Spínola · octubre 2017 — febrer 2018</div><ul><li>Tècnic esportiu en futbol.</li><li>Tutoria i coordinació de la formació en centres de treball.</li></ul></div>
-<div class="card"><h3>Entrenador i coordinador de futbol formatiu</h3><div class="meta">CF Guinardó · temporades 2014/15 — 2016/17</div><ul><li>Entrenador del primer equip masculí.</li><li>Responsable de metodologia i preparació física del futbol base.</li></ul></div>
+<section id="experiencia" class="section dark">
+<div class="wrap">
+<div class="sectionhead"><h2>Experiència</h2><p>Una trajectòria que combina docència, formació esportiva, futbol formatiu i coordinació de la formació en centres de treball.</p></div>
+<div class="timeline">
+<div class="item"><div class="year">2018 — actualitat</div><h3>Docent de cicles formatius · Departament d'Educació</h3><p>Tècnic esportiu en futbol, esquí alpí i muntanya. Tutoria i coordinació de la formació en centres de treball.</p></div>
+<div class="item"><div class="year">2019 — 2020</div><h3>Entrenador de futbol formatiu · Barça Academy</h3><p>Barça Escola Barcelona i participació en un campus d'estiu internacional a Itàlia.</p></div>
+<div class="item"><div class="year">2017 — 2018</div><h3>Docent de cicles formatius · Col·legi Abat Oliba Spínola</h3><p>Tècnic esportiu en futbol. Tutoria i coordinació de la formació en centres de treball.</p></div>
+<div class="item"><div class="year">2014/15 — 2016/17</div><h3>Entrenador i coordinador de futbol formatiu · CF Guinardó</h3><p>Entrenador del primer equip masculí i responsable de metodologia i preparació física del futbol base.</p></div>
+</div>
 </div>
 </section>
 
-<section id="formacio">
-<div class="section-title"><h2>Formació acadèmica</h2><p>Formació universitària i tècnica vinculada a l'educació, l'esport i la gestió.</p></div>
-<div class="grid">
-<div class="card"><h3>Grau en Ciències de l'Activitat Física i l'Esport</h3><div class="meta">Universidad de Granada · 2014</div></div>
-<div class="card"><h3>Màster universitari en Formació del Professorat</h3><div class="meta">Universitat Ramon Llull — Blanquerna · 2015</div></div>
-<div class="card"><h3>Màster Alt Rendiment en esports col·lectius</h3><div class="meta">INEFC Barcelona — Byomedic System · 2016</div></div>
-<div class="card"><h3>Tècnic esportiu superior en futbol</h3><div class="meta">Centro Nacional de Formación de Entrenadores · 2017</div></div>
-<div class="card"><h3>Grau en Educació Primària — Especialitat Educació Física</h3><div class="meta">Universidad Europea de Madrid · 2018</div></div>
-<div class="card"><h3>Màster universitari en gestió esportiva</h3><div class="meta">Universidad Internacional de Valencia · 2019</div></div>
+<section id="formacio" class="section">
+<div class="wrap">
+<div class="sectionhead"><h2>Formació</h2><p>Formació universitària i tècnica orientada a l'educació, l'esport, el futbol, el rendiment i la gestió esportiva.</p></div>
+<div class="qual">
+<div><h3>Grau en Ciències de l'Activitat Física i l'Esport</h3><p>Universidad de Granada · 2014</p></div>
+<div><h3>Màster universitari en Formació del Professorat</h3><p>Universitat Ramon Llull — Blanquerna · 2015</p></div>
+<div><h3>Màster Alt Rendiment en esports col·lectius</h3><p>INEFC Barcelona — Byomedic System · 2016</p></div>
+<div><h3>Tècnic esportiu superior en futbol</h3><p>Centro Nacional de Formación de Entrenadores · 2017</p></div>
+<div><h3>Grau en Educació Primària — Especialitat Educació Física</h3><p>Universidad Europea de Madrid · 2018</p></div>
+<div><h3>Màster universitari en gestió esportiva</h3><p>Universidad Internacional de Valencia · 2019</p></div>
+</div>
 </div>
 </section>
 
-<section id="competencies">
-<div class="section-title"><h2>Competències</h2><p>Àrees destacades del perfil professional.</p></div>
-<div class="skills">
-<span class="skill">Adaptabilitat i innovació docent</span><span class="skill">Treball en equip</span><span class="skill">Pensament crític</span><span class="skill">Planificació i organització</span><span class="skill">Competència digital i IA aplicada</span>
+<section id="projectes" class="section">
+<div class="wrap">
+<div class="sectionhead"><h2>Àrees de treball</h2><p>Els àmbits que defineixen el perfil professional i sobre els quals es pot ampliar informació, projectes i recursos en futures actualitzacions de la web.</p></div>
+<div class="cards">
+<div class="card"><div class="num">01</div><h3>Innovació docent</h3><p>Disseny de processos d'ensenyament-aprenentatge, adaptabilitat, innovació i competència digital.</p></div>
+<div class="card"><div class="num">02</div><h3>Formació esportiva</h3><p>Formació de tècnics esportius i connexió entre coneixement teòric i aplicació pràctica.</p></div>
+<div class="card"><div class="num">03</div><h3>Futbol i metodologia</h3><p>Entrenament, futbol formatiu, metodologia i preparació física aplicats a contextos esportius.</p></div>
 </div>
-<div class="grid" style="margin-top:50px">
-<div><h3>Idiomes</h3><p>Català i castellà — C2<br>Anglès — B1</p></div>
-<div><h3>Certificats</h3><p>ACTIC — Nivell 2<br>Google Certified Educator — Nivell 1<br>COPLEFC 55322</p></div>
 </div>
 </section>
 
-<section id="contacte" class="contact">
-<div class="section-title"><h2>Contacte</h2><p>Disponible per a oportunitats i projectes vinculats a la docència, la formació esportiva i el futbol.</p></div>
-<p><strong>Tel.</strong> +34 696 68 31 31</p>
-<p><strong>Email.</strong> <a href="mailto:lmestre4@xtec.cat">lmestre4@xtec.cat</a></p>
+<section class="section dark">
+<div class="wrap">
+<div class="sectionhead"><h2>Competències</h2><p>Competències destacades del perfil professional.</p></div>
+<div class="tags"><span class="tag">Adaptabilitat i innovació docent</span><span class="tag">Treball en equip</span><span class="tag">Pensament crític</span><span class="tag">Planificació i organització</span><span class="tag">Competència digital i IA aplicada</span></div>
+<div class="cards" style="margin-top:55px">
+<div class="card"><div class="num">IDIOMES</div><h3>Català i castellà</h3><p>Nivell C2</p></div>
+<div class="card"><div class="num">IDIOMES</div><h3>Anglès</h3><p>Nivell B1</p></div>
+<div class="card"><div class="num">CERTIFICATS</div><h3>ACTIC · Google Certified Educator</h3><p>ACTIC Nivell 2 · Google Certified Educator Nivell 1 · COPLEFC 55322</p></div>
+</div>
+</div>
 </section>
 
-<footer>© Lluís Mestre · Perfil professional</footer>
-</body>
-</html>
+<section id="contacte" class="section full dark">
+<div class="wrap contactgrid">
+<div><div class="eyebrow">Contacte</div><div class="contactbig"><a href="mailto:lmestre4@xtec.cat">lmestre4@xtec.cat</a></div></div>
+<div class="contactsmall"><p><strong>Lluís Mestre</strong><br>Docència · Futbol · Rendiment esportiu</p><p>+34 696 68 31 31</p><p><a href="CV_Lluis_Mestre.pdf">Descarregar CV en PDF →</a></p></div>
+</div>
+</section>
+<footer class="footer"><div class="wrap">© Lluís Mestre · Portfolio professional</div></footer>
+</body></html>
