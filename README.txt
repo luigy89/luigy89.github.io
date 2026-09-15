@@ -1,15 +1,13 @@
-VERSIÓ 3 — WEB BILINGÜE CATALÀ / ESPAÑOL
+VERSIÓ 4 — WEB TRILINGÜE
 
-La web incorpora un selector d'idioma amb banderes:
-🇨🇺 Català
-🇪🇸 Español
+Selector superior:
+CAT · ESP · ENG
 
-L'idioma escollit es desa al navegador i es manté en futures visites.
+La web canvia el contingut entre català, castellà i anglès sense recarregar.
+L'idioma triat queda guardat al navegador.
 
-Per actualitzar GitHub Pages, substitueix a la teva arrel:
-- index.html
-- perfil.jpg
-- CV_Lluis_Mestre.pdf
-- .nojekyll
-
-No cal modificar cap configuració de GitHub Pages.
+Actualitza al repositori GitHub:
+index.html
+perfil.jpg
+CV_Lluis_Mestre.pdf
+.nojekyll
